@@ -8,7 +8,7 @@ public class Hero : MonoBehaviour
     [SerializeField] private Transform _grooundDetector;
 
     private Rigidbody2D _rigidbody2D;
-    private Animators _animators;
+    private HeroAnimator _animators;
     private Animator _animator;
 
     private int _speed = 3;
@@ -21,7 +21,7 @@ public class Hero : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _animators = new Animators(_animator);
+        _animators = new HeroAnimator(_animator);
         _mover =  new Mover();
     }
 
@@ -56,7 +56,7 @@ public class Hero : MonoBehaviour
 
 public class Mover
 {
-    private readonly int degreesRotation = 180;
+    private readonly int _degreesRotation = 180;
 
     public void Run(Transform transform, int speed, string Horizontal)
     {
@@ -67,7 +67,7 @@ public class Mover
 
         if (Input.GetAxis(Horizontal) < 0)
         {
-            Flip(degreesRotation, transform);
+            Flip(_degreesRotation, transform);
         }
 
         Vector3 directionVector = Vector3.right * Input.GetAxisRaw(Horizontal);

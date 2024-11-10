@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class Animators
+public class HeroAnimator
 {
-
-    public Animators(Animator animator)
+    public HeroAnimator(Animator animator)
     {
         _animator = animator;
     }
