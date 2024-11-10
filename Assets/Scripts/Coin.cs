@@ -13,16 +13,21 @@ public class Coin : MonoBehaviour
 
     private WaitForSeconds _sleepTimer;
 
+    private string _heroName = "Hero";
+
     private void Awake()
     {
         _sleepTimer = new WaitForSeconds(_sleepTime);
-         _collider = GetComponent<Collider2D>();
+        _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(Respawning());
+        if (collision.transform.tag == (_heroName))
+        {
+            StartCoroutine(Respawning());
+        }
     }
 
     private IEnumerator Respawning()

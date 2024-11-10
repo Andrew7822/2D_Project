@@ -5,7 +5,7 @@ public class PointsMover : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private Transform _pointsContainer;
 
-    private int nextPlace;
+    private int _nextPlace;
     private Transform[] _points;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class PointsMover : MonoBehaviour
 
     private void Update()
     {
-        Transform nextPoint = _points[nextPlace];
+        Transform nextPoint = _points[_nextPlace];
 
         if (transform.position == nextPoint.position)
         {
@@ -32,9 +32,9 @@ public class PointsMover : MonoBehaviour
 
     private void DetermineVector()
     {
-        nextPlace = ++nextPlace % _points.Length;
+        _nextPlace = ++_nextPlace % _points.Length;
 
-        Vector3 moveDerection = _points[nextPlace].transform.position;
+        Vector3 moveDerection = _points[_nextPlace].transform.position;
         transform.right = moveDerection - transform.position;
     }
 }

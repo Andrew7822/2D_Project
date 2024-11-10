@@ -15,7 +15,7 @@ public class Hero : MonoBehaviour
     private float _jumpForce = 0.5f;
     private bool _isGrounded;
 
-    Mover _mover;
+    private Mover _mover;
 
     private void Awake()
     {

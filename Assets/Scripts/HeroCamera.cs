@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraControler : MonoBehaviour
+public class HeroCamera : MonoBehaviour
 {
     [SerializeField] private Transform player;
 
