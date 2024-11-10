@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec67a6875305f9747a27d194ba52aecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1192627282}
+  player: {fileID: 1192627286}
 --- !u!4 &572787635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3229325222224314905, guid: 3e80e72018001b74fb38f804e5b1b438, type: 3}
@@ -2753,6 +2753,8 @@ GameObject:
   - component: {fileID: 1192627283}
   - component: {fileID: 1192627285}
   - component: {fileID: 1192627286}
+  - component: {fileID: 1192627287}
+  - component: {fileID: 1192627288}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Hero
@@ -2948,6 +2950,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _grooundDetector: {fileID: 1209290634}
+--- !u!114 &1192627287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192627278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c865adf55ea5fe49b56d9f2eb0c6a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1192627288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192627278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8150a66117a940468f96ec28161879a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1199148231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3229325222224314905, guid: 3e80e72018001b74fb38f804e5b1b438, type: 3}
